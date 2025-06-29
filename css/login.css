@@ -1,0 +1,94 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right,#a2d8e8,#439bd6);
+  display: flex;
+  flex-direction: column; /* ✅ allow vertical stacking (nav + content) */
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #00695c;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00897b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00695c;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.note a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ✅ Navigation Bar Styles */
+.user-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #a2d8e8,#439bd6;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  height:20vh;
+}
+
+
+.user-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 30px;
+  transition: color 0.3s ease;
+  margin-top: 30px;
+  word-spacing: 10px;
+}
+
+.user-nav a:hover {
+  color: #0a1112;
+}
+
+

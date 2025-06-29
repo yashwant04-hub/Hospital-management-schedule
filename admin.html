@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - OT Scheduler</title>
+  <link rel="stylesheet" href="css/admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏥 Admin Dashboard - OT Scheduling</h1>
+
+    <!-- 🔗 Admin Navigation -->
+    <nav class="admin-nav">
+      <a href="manage-doctors.html">Manage Doctors</a>
+      <a href="manage-patients.html">Manage Patients</a>
+      <a href="post-operation.html">Post OT Schedule</a>
+      <a href="index.html">Logout</a>
+    </nav>
+
+    <!-- 📝 Add OT Schedule Form -->
+    <section class="form-section">
+      <h2>Add New Surgery Schedule</h2>
+      <form id="scheduleForm">
+        <input type="text" id="patient" placeholder="Patient Name" required />
+        <input type="text" id="doctor" placeholder="Doctor Name" required />
+        <input type="datetime-local" id="datetime" required />
+        <input type="text" id="otid" placeholder="OT Room ID" required />
+        <input type="text" id="anesthesia" placeholder="Type of Anesthesia" required />
+        <input type="text" id="anesthetist" placeholder="Anesthesiologist Name" />
+        <input type="text" id="assistant" placeholder="Assistant Surgeon (optional)" />
+        <input type="text" id="nurses" placeholder="Nurses (comma-separated)" />
+        <textarea id="materials" placeholder="Materials/Drugs Used"></textarea>
+        <textarea id="remarks" placeholder="Doctor Remarks"></textarea>
+        <button type="submit">➕ Add OT Schedule</button>
+      </form>
+    </section>
+
+    <!-- 📋 OT Schedules Display -->
+    <section class="schedules-section">
+      <h2>📋 All OT Schedules</h2>
+      <div id="schedules"></div>
+    </section>
+  </div>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
+

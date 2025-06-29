@@ -1,0 +1,96 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #acc5de;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+/* Button container for "Add New" */
+.btn-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.btn-container button {
+  padding: 10px 20px;
+  background-color: #2d98da;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-container button:hover {
+  background-color: #2179b8;
+}
+
+.schedule-card {
+  background: #ffffff;
+  border-left: 6px solid #2d98da;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.schedule-card:hover {
+  transform: scale(1.01);
+}
+
+.schedule-card h2 {
+  margin-top: 0;
+  color: #34495e;
+}
+
+.schedule-card p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* Action buttons at bottom of each card */
+.card-actions {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+/* Individual button colors */
+.card-actions button:nth-child(1) { background: #007bff; } /* Edit */
+.card-actions button:nth-child(2) { background: #e74c3c; } /* Cancel */
+.card-actions button:nth-child(3) { background: #f39c12; } /* Postpone */
+.card-actions button:nth-child(4) { background: #c0392b; } /* Emergency */
+
+/* Hover effects for buttons */
+.card-actions button:hover:nth-child(1) { background: #0056b3; }
+.card-actions button:hover:nth-child(2) { background: #c0392b; }
+.card-actions button:hover:nth-child(3) { background: #d68910; }
+.card-actions button:hover:nth-child(4) { background: #a93226; }
+

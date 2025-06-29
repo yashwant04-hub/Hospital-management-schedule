@@ -1,0 +1,94 @@
+/* Container to hold all user cards side-by-side */
+
+.user-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual user card */
+.user-card {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px; /* control width per card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile image */
+.user-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* User details text */
+.user-details h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #00796b;
+}
+
+.user-details p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Form styling */
+.edit-form {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.edit-form input {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.edit-btn,
+.save-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+  background: #004d40;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+  color: #00796b;
+}
+body{
+  background-color: #acc5de;
+}

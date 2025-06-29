@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Login - OT Scheduler</title>
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  
+  <!-- ✅ Custom CSS -->
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+
+  <!-- ✅ Navigation bar -->
+  <nav class="user-nav">
+    <a href="view-doctors.html">👨‍⚕️ View Doctors</a>
+    <a href="view-surgeries.html">🩺 View Surgeries</a>
+    <a href="index.html">🏠 Home</a>
+  </nav>
+
+  <div class="container">
+    <div class="login-card">
+      <h2>👤 User Login</h2>
+
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+
+        <button type="submit">🔓 Login</button>
+      </form>
+
+      <p class="note">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </div>
+
+  <!-- ✅ JS for login functionality -->
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
+
+
+

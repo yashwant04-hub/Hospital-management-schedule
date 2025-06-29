@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surgical OT Schedules</title>
+  <link rel="stylesheet" href="schedules.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Post OT Surgery Schedules</h1>
+
+    <!-- Add New Button -->
+    <div class="btn-container">
+      <button onclick="addNewCard()">➕ Add New Schedule</button>
+    </div>
+
+    <!-- ✅ Fixed: Added card-container to hold all schedule cards -->
+    <div id="card-container">
+
+      <div class="schedule-card">
+        <h2>Patient: Ravi Kumar</h2>
+        <p><strong>Doctor:</strong> Dr. Meera Sharma</p>
+        <p><strong>Date & Time:</strong> 2025-06-27 10:30 AM</p>
+        <p><strong>OT ID:</strong> OT-101</p>
+        <p><strong>Anesthesia:</strong> General</p>
+        <p><strong>Anesthetist:</strong> Dr. Anil Gupta</p>
+        <p><strong>Materials:</strong> Scalpel, Sutures, Anesthetic Drugs</p>
+        <p><strong>Remarks:</strong> Monitor BP closely due to hypertension history</p>
+        <div class="card-actions">
+          <button onclick="editCard(this)">✏️ Edit</button>
+          <button onclick="cancelCard(this)">❌ Cancel</button>
+          <button onclick="postponeCard(this)">⏳ Postpone</button>
+          <button onclick="emergencyAlert(this)">🚨 Emergency</button>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <h2>Patient: Sneha Verma</h2>
+        <p><strong>Doctor:</strong> Dr. Rahul Khanna</p>
+        <p><strong>Date & Time:</strong> 2025-06-27 12:00 PM</p>
+        <p><strong>OT ID:</strong> OT-102</p>
+        <p><strong>Anesthesia:</strong> Spinal</p>
+        <p><strong>Anesthetist:</strong> Dr. Preeti Rao</p>
+        <p><strong>Materials:</strong> Sterile Gloves, IV Line, Lidocaine</p>
+        <p><strong>Remarks:</strong> Expecting 45-minute laparoscopic procedure</p>
+        <div class="card-actions">
+          <button onclick="editCard(this)">✏️ Edit</button>
+          <button onclick="cancelCard(this)">❌ Cancel</button>
+          <button onclick="postponeCard(this)">⏳ Postpone</button>
+          <button onclick="emergencyAlert(this)">🚨 Emergency</button>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <h2>Patient: Arjun Nair</h2>
+        <p><strong>Doctor:</strong> Dr. Nikhil Joshi</p>
+        <p><strong>Date & Time:</strong> 2025-06-27 02:15 PM</p>
+        <p><strong>OT ID:</strong> OT-103</p>
+        <p><strong>Anesthesia:</strong> Local</p>
+        <p><strong>Anesthetist:</strong> Dr. Kavya Iyer</p>
+        <p><strong>Materials:</strong> Syringe, Scissors, Dressings</p>
+        <p><strong>Remarks:</strong> Minor procedure – mole excision</p>
+        <div class="card-actions">
+          <button onclick="editCard(this)">✏️ Edit</button>
+          <button onclick="cancelCard(this)">❌ Cancel</button>
+          <button onclick="postponeCard(this)">⏳ Postpone</button>
+          <button onclick="emergencyAlert(this)">🚨 Emergency</button>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <h2>Patient: Fatima Sheikh</h2>
+        <p><strong>Doctor:</strong> Dr. Arvind Rao</p>
+        <p><strong>Date & Time:</strong> 2025-06-28 09:00 AM</p>
+        <p><strong>OT ID:</strong> OT-104</p>
+        <p><strong>Anesthesia:</strong> General</p>
+        <p><strong>Anesthetist:</strong> Dr. Sheetal Mehta</p>
+        <p><strong>Materials:</strong> Oxygen, Surgical Drapes, Forceps</p>
+        <p><strong>Remarks:</strong> Appendectomy scheduled; observe for allergy</p>
+        <div class="card-actions">
+          <button onclick="editCard(this)">✏️ Edit</button>
+          <button onclick="cancelCard(this)">❌ Cancel</button>
+          <button onclick="postponeCard(this)">⏳ Postpone</button>
+          <button onclick="emergencyAlert(this)">🚨 Emergency</button>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <h2>Patient: Deepak Reddy</h2>
+        <p><strong>Doctor:</strong> Dr. Priya Narayan</p>
+        <p><strong>Date & Time:</strong> 2025-06-28 11:30 AM</p>
+        <p><strong>OT ID:</strong> OT-105</p>
+        <p><strong>Anesthesia:</strong> Regional</p>
+        <p><strong>Anesthetist:</strong> Dr. Sameer Shah</p>
+        <p><strong>Materials:</strong> Nerve Block Kit, Oxygen Mask, Monitor Pads</p>
+        <p><strong>Remarks:</strong> OT booked for orthopedic surgery, expected duration: 1.5 hrs</p>
+        <div class="card-actions">
+          <button onclick="editCard(this)">✏️ Edit</button>
+          <button onclick="cancelCard(this)">❌ Cancel</button>
+          <button onclick="postponeCard(this)">⏳ Postpone</button>
+          <button onclick="emergencyAlert(this)">🚨 Emergency</button>
+        </div>
+      </div>
+
+    </div> <!-- END #card-container -->
+
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function editCard(btn) {
+      alert("Edit functionality will be implemented here.");
+    }
+
+    function cancelCard(btn) {
+      const card = btn.closest(".schedule-card");
+      if (confirm("Are you sure you want to cancel this surgery?")) {
+        card.remove();
+      }
+    }
+
+    function postponeCard(btn) {
+      const card = btn.closest(".schedule-card");
+      const newTime = prompt("Enter new date & time (e.g., 2025-06-29 03:00 PM):");
+      if (newTime) {
+        const dateP = card.querySelector("p:nth-child(3)");
+        dateP.innerHTML = `<strong>Date & Time:</strong> ${newTime}`;
+        alert("Schedule postponed.");
+      }
+    }
+
+    function emergencyAlert(btn) {
+      alert("🚨 Emergency! Immediate attention required for this surgery!");
+      btn.closest(".schedule-card").style.border = "2px solid red";
+    }
+
+    function addNewCard() {
+      const container = document.getElementById("card-container");
+      if (!container) {
+        alert("Card container not found!");
+        return;
+      }
+
+      const card = document.createElement("div");
+      card.className = "schedule-card";
+      card.innerHTML = `
+        <h2>Patient: [New Patient]</h2>
+        <p><strong>Doctor:</strong> [New Doctor]</p>
+        <p><strong>Date & Time:</strong> [Date Time]</p>
+        <p><strong>OT ID:</strong> [OT ID]</p>
+        <p><strong>Anesthesia:</strong> [Anesthesia Type]</p>
+        <p><strong>Anesthetist:</strong> [Anesthetist]</p>
+        <p><strong>Materials:</strong> [Materials]</p>
+        <p><strong>Remarks:</strong> [Remarks]</p>
+        <div class="card-actions">
+          <button onclick="editCard(this)">✏️ Edit</button>
+          <button onclick="cancelCard(this)">❌ Cancel</button>
+          <button onclick="postponeCard(this)">⏳ Postpone</button>
+          <button onclick="emergencyAlert(this)">🚨 Emergency</button>
+        </div>
+      `;
+      container.appendChild(card);
+    }
+    function editCard(btn) {
+  const card = btn.closest(".schedule-card");
+
+  const patientName = prompt("Enter Patient Name:", card.querySelector("h2").textContent.replace("Patient: ", ""));
+  const doctor = prompt("Enter Doctor Name:", card.querySelectorAll("p")[0].textContent.replace("Doctor: ", ""));
+  const datetime = prompt("Enter Date & Time:", card.querySelectorAll("p")[1].textContent.replace("Date & Time: ", ""));
+  const otId = prompt("Enter OT ID:", card.querySelectorAll("p")[2].textContent.replace("OT ID: ", ""));
+  const anesthesia = prompt("Enter Anesthesia Type:", card.querySelectorAll("p")[3].textContent.replace("Anesthesia: ", ""));
+  const anesthetist = prompt("Enter Anesthetist:", card.querySelectorAll("p")[4].textContent.replace("Anesthetist: ", ""));
+  const materials = prompt("Enter Materials:", card.querySelectorAll("p")[5].textContent.replace("Materials: ", ""));
+  const remarks = prompt("Enter Remarks:", card.querySelectorAll("p")[6].textContent.replace("Remarks: ", ""));
+
+  // Update values
+  if (patientName) card.querySelector("h2").textContent = `Patient: ${patientName}`;
+  if (doctor) card.querySelectorAll("p")[0].innerHTML = `<strong>Doctor:</strong> ${doctor}`;
+  if (datetime) card.querySelectorAll("p")[1].innerHTML = `<strong>Date & Time:</strong> ${datetime}`;
+  if (otId) card.querySelectorAll("p")[2].innerHTML = `<strong>OT ID:</strong> ${otId}`;
+  if (anesthesia) card.querySelectorAll("p")[3].innerHTML = `<strong>Anesthesia:</strong> ${anesthesia}`;
+  if (anesthetist) card.querySelectorAll("p")[4].innerHTML = `<strong>Anesthetist:</strong> ${anesthetist}`;
+  if (materials) card.querySelectorAll("p")[5].innerHTML = `<strong>Materials:</strong> ${materials}`;
+  if (remarks) card.querySelectorAll("p")[6].innerHTML = `<strong>Remarks:</strong> ${remarks}`;
+}
+
+  </script>
+</body>
+</html>
+
+
